@@ -1,8 +1,35 @@
 doctype html
-link(rel='stylesheet' href='css/style.css')
-
 head
-    title My First Full Stack
+meta(charset='UTF-8')
+meta(name='viewport' content='width=device-width, initial-scale=1.0')
+title simple todo app
+link(rel='stylesheet' href='/css/style.css')
+// script(src='js/main.js')
 body
-    h1 Simple TODO APP
-    p TODO: Complete the app!
+// Heading
+h1 simple todo app
+
+p Add your TODO items here
+
+// Form to add new todo items
+form#todoForm(action='#' method='POST')
+    label(for='item') todo: 
+    input#item(type='text' name='todo' required)
+    button(type='submit') add
+
+hr
+
+// todo List Section
+div(class='list')
+    h2 my todo list
+
+    ul#todoList
+
+// Backend-Frontend hookup
+ul
+- for (let i = 0; i < tasks.length; i++)
+        li= tasks[i].id + ") " + tasks[i].task
+            form(action="/delete", method="post")
+                input(type="hidden", name="id" value=tasks[i].id)
+                input(type="submit", value="Delete")
+                

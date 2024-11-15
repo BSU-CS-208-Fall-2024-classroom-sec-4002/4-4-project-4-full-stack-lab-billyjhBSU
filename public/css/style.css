@@ -1,3 +1,46 @@
-body{
-    background-color: hotpink;
+body {
+    float: center;
+    margin: auto;
+    text-align: center;
+    text-transform:lowercase;
+    background-color: peru;
+}
+
+p {
+    font-family : 'Courier New', Courier, monospace;
+    color: red;
+}
+
+h1{
+    font-size:20pt;
+    background-color: lightcyan;
+}
+  
+h2 {
+    font-size: 18pt;
+}
+
+.list > h2 {
+    text-align: center;
+}
+
+.list {
+    border: 2px solid pink;
+    width: 25%;
+    padding: 10px;
+    margin: auto;
+    float: center;
+}
+
+button {
+    background-color: green;
+    font-variant: small-caps;
+    font-size: 100px;
+    padding: 5px;
+}
+
+input[type=submit] {
+    background-color: red;
+    font-variant: small-caps;
+    padding: 5px;
 }
